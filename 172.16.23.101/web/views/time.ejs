@@ -1,0 +1,85 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(5)').attr('class','current');
+});
+</script>
+<section class="docs">
+  <div class="grid">
+     <div class="show-on-mobiles">
+        <% include sidebar_mobile %>
+         <div class="whole show-on-mobiles">
+           <article>
+             <% for(var i=time1.length-1;i>=0;i--){%>
+                 <%if(time1[i]==null){%>
+                 <%} else {%>
+                     <% for(var j=time1[i].length-1;j>=0;j--){%>
+                         <%if(time1[i][j]==null){%>
+                         <%} else {%>
+                             <a><h2><%=i+start_year%>年<%=j+1%>月</h2></a>
+                             <%for(var k=0;k<time1[i][j].length;k++){%>
+                                 <ul>
+                                 <header class="mutepig_ep" style="height:auto;margin-left:10px">
+                                     <div>
+
+                                     <li>
+                                         <div>
+                                             <h2><a href="/article/<%=time1[i][j][k].substring(0,time1[i][j][k].length-3)%>" style="color:#97FFFF;font-size:13px"><%=time1[i][j][k].replace(/-/g,' ').substring(0,time1[i][j][k].length-3) %></a></h2>
+                                         </div>
+                                     </li>
+                                     </div>
+                                 </header>
+                                </ul>
+                             <%}%>
+                         <%}%>
+                     <%}%>
+                 <%}%>
+             <%}%>
+
+             <div class="section-nav">
+               <div class="left align-right"></div>
+               <div class="right align-left"></div>
+               <div class="clear"></div>
+             </div>
+           </article>
+         </div>
+     </div>
+    <% include sidebar %>
+    <div class="unit three-quarters hide-on-mobiles">
+      <article>
+        <% for(var i=time1.length-1;i>=0;i--){%>
+            <%if(time1[i]==null){%>
+            <%} else {%>
+                <% for(var j=time1[i].length-1;j>=0;j--){%>
+                    <%if(time1[i][j]==null){%>
+                    <%} else {%>
+                        <a><h2><%=i+start_year%>年<%=j+1%>月</h2></a>
+                        <%for(var k=0;k<time1[i][j].length;k++){%>
+                            <ul>
+                            <header class="mutepig_ep">
+                                <div>
+                                <li>
+                                    <div class="mutepig_calendar3">
+                                        <h2 class="middle"><a href="/article/<%=time1[i][j][k].substring(0,time1[i][j][k].length-3)%>" style="color:#97FFFF"><%=time1[i][j][k].replace(/-/g,' ').substring(0,time1[i][j][k].length-3) %></a></h2>
+                                        <div class="mutepig_calendar2"><i class="fa fa-calendar"></i><%=time[filename.indexOf(time1[i][j][k])] %></div>
+                                    </div>
+                                </li>
+                                </div>
+                            </header>
+                        </ul>
+                        <%}%>
+                    <%}%>
+                <%}%>
+            <%}%>
+        <%}%>
+
+        <div class="section-nav">
+          <div class="left align-right"></div>
+          <div class="right align-left"></div>
+          <div class="clear"></div>
+        </div>
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles godness">
+        <aside>
+<% include foot %>

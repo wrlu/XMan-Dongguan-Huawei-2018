@@ -1,0 +1,97 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(4)').attr('class','current');
+});
+</script>
+<section class="docs">
+  <div class="grid">
+    <div class="show-on-mobiles">
+        <% include sidebar_mobile %>
+        <div class="whole show-on-mobiles">
+          <article>
+            <% for(var i=10*(page-1);i<(page*10>filename.length?filename.length:page*10);i++) {%>
+            <%if(i>=filename.length){%>
+
+            <%}else{%>
+            <div style="height:65px">
+                    <h2 style="margin:3px"><a href="/article/<%=filename[i].substring(0,filename[i].length-3)%>" style="font-size:15px"><%=filename[i].replace(/-/g,' ').substring(0,filename[i].length-3) %></a></h2>
+    				<div>
+    	                <i class="fa fa-tags" style="margin-left:10px"></i>
+                            <% for(var j=0;j<type[i].length;j++) {%>
+                            <div class="mutepig_tag cat-links" style="border: 0.05rem solid transparent;background:<%=tagbackground[parseInt(Math.random()*(tagbackground.length-1),10)] %>">
+                                <a class='cat-links' href="/category/<%=type[i][j] %>"><%=type[i][j] %></a>
+                            </div>
+                            <% } %>
+                            <div class="mutepig_calendar" style="font-size:14px"><i class="fa fa-calendar"></i><%=time[i].split('.')[0] %></div>
+                        <div class="clearfix"></div>
+    	            </div>
+    			<div class="clearfix"></div>
+    		</div>
+
+            <br>
+            <% } %>
+            <% } %>
+            <div class="section-nav">
+                <% if(page==1){ %>
+                <% } else { %>
+                    <div class="left align-right">
+                        <a href="/index/<%=page-1%>" class="prev">上一页</a>
+                    </div>
+                <%}%>
+                <% if(page==maxpage){ %>
+                <%} else {%>
+                <div class="right align-left">
+                    <a href="/index/<%=page+1%>" class="next">下一页</a>
+                </div>
+                <%}%>
+              <div class="clear"></div>
+          </div>
+          </article>
+      </div>
+    </div>
+    <% include sidebar %>
+    <div class="unit three-quarters hide-on-mobiles">
+      <article>
+        <% for(var i=10*(page-1);i<(page*10>filename.length?filename.length:page*10);i++) {%>
+        <%if(i>=filename.length){%>
+
+        <%}else{%>
+        <div style="height:65px">
+                <h2 style="margin:3px"><a href="/article/<%=filename[i].substring(0,filename[i].length-3)%>"><%=filename[i].replace(/-/g,' ').substring(0,filename[i].length-3) %></a></h2>
+				<div>
+	                <i class="fa fa-tags" style="margin-left:10px"></i>
+                        <% for(var j=0;j<type[i].length;j++) {%>
+                        <div class="mutepig_tag cat-links" style="background:<%=tagbackground[parseInt(Math.random()*(tagbackground.length-1),10)] %>">
+                            <a class='cat-links' href="/category/<%=type[i][j] %>"><%=type[i][j] %></a>
+                        </div>
+                        <% } %>
+                        <div class="mutepig_calendar" style=""><i class="fa fa-calendar"></i><%=time[i].split('.')[0] %></div>
+                    <div class="clearfix"></div>
+	            </div>
+			<div class="clearfix"></div>
+		</div>
+
+        <br>
+        <% } %>
+        <% } %>
+        <div class="section-nav">
+            <% if(page==1){ %>
+            <% } else { %>
+                <div class="left align-right">
+                    <a href="/index/<%=page-1%>" class="prev">上一页</a>
+                </div>
+            <%}%>
+            <% if(page==maxpage){ %>
+            <%} else {%>
+            <div class="right align-left">
+                <a href="/index/<%=page+1%>" class="next">下一页</a>
+            </div>
+            <%}%>
+          <div class="clear"></div>
+      </div>
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles godness">
+        <aside>
+<% include foot %>

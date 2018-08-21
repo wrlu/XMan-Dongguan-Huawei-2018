@@ -1,0 +1,49 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(7)').attr('class','current');
+});
+</script>
+<section class="docs">
+  <div class="grid">
+     <div class="show-on-mobiles">
+        <% include sidebar_mobile %>
+         <div class="whole show-on-mobiles">
+           <article>
+             <a><h2>About</h2></a>
+             <div class='bdw_category' style="margin-left: 20px;">
+                 <ul>
+                     <li><h4><a style="color:#7EC0EE;font-size:15px">I wrote this website yesterday, whose front borrowed from others</a></h4></li>
+                     <li><h4><a style="color:#7EC0EE;font-size:15px">Today I want to deploy it ,but i realized that it may be complicated</a></h4></li>
+                     <li><h4 style="display:inline-block;"><a style="color:#7EC0EE;font-size:15px;">So i try to deploy it with </a></h4><a> git hook</a></li>
+                 </ul>
+             </div>
+             <div class="section-nav">
+               <div class="left align-right"></div>
+               <div class="right align-left"></div>
+               <div class="clear"></div>
+             </div>
+           </article>
+         </div>
+     </div>
+    <% include sidebar %>
+    <div class="unit three-quarters hide-on-mobiles">
+      <article>
+        <a><h1>About</h1></a>
+        <div class='bdw_category'>
+        <ul>
+            <li><h4><a style="color:#7EC0EE;font-size:15px">I wrote this website yesterday, whose front borrowed from others</a></h4></li>
+            <li><h4><a style="color:#7EC0EE;font-size:15px">Today I want to deploy it ,but i realized that it may be complicated</a></h4></li>
+            <li><h4 style="display:inline-block;"><a style="color:#7EC0EE;font-size:15px;">So i try to deploy it with </a></h4><a> git hook</a></li>
+        </ul>
+        </div>
+        <div class="section-nav">
+          <div class="left align-right"></div>
+          <div class="right align-left"></div>
+          <div class="clear"></div>
+        </div>
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles godness">
+        <aside>
+<% include foot %>

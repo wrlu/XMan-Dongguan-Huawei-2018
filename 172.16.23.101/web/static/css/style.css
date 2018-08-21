@@ -1,0 +1,198 @@
+/*
+乱七八糟的css
+第一部分是根据文章生成的md的目录的css
+第二块是标签的css
+*/
+.Simple {
+    line-height: 120%;
+}
+.Simple p {
+    font-size: 30px;
+    color: #9c9c9c;
+    margin-bottom: 0.3em;
+}
+.Simple .Simple_content {
+    padding: 5px 0px;
+}
+.Simple li{
+    text-indent: 20px;
+    font-size: 14px;
+    list-style-type:none;
+}
+#Simple_Toggle {
+    font-size: 13px;
+    font-weight: normal;
+    color: #FFF;
+    display: inline-block;
+    line-height: 20px;
+    background: #5cc26f;
+    font-style: normal;
+    padding: 1px 8px;
+    margin-right: 10px;
+}
+
+.Simple a:hover {
+    color: #5cc26f;
+}
+
+.Simple a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.article-info::before{
+    content: "";
+    display: table;
+}
+
+.article-info-block {
+    box-sizing: border-box;
+    float: left;
+    font-size: 19px;
+    padding: 20px 15px;
+    text-align: center;
+    width: 50%;
+}
+#follow {
+    background: #38b7ea none repeat scroll 0 0;
+    border-radius: 20px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto 10px;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    width: 150px;
+}
+#location {
+    color: #9a9ea3;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+}
+
+.fa {
+    margin-right: 5px;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: inherit;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+.grid .three-quarters, .grid .w-3-4 {
+    margin-left: 21%;
+     width: 60%;
+}
+.grid .godness{
+    width: 17%;
+}
+.grid .godness .yukino{
+    width:14%;
+    top:71%;
+    margin-left: 4%;
+}
+
+.mutepig_calendar{
+    color: #999;
+    font: 20px FontAwesome;
+    margin-right: 10px;
+    position: relative;
+    margin-top: 0;
+    text-rendering: auto;
+    vertical-align:middle;/*垂直居中*/
+    float: right;
+}
+
+a.cat-links{
+    color:#FFFFFF;
+    font-size: 16px;
+    margin: 3px;
+}
+
+.mutepig_tag{
+    margin-left: auto;
+    border: 0.2rem solid transparent;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+    width: auto;
+    display: inline-block;
+    font-weight: bold;
+
+}
+
+.mutepig_ep{
+    margin-left: 40px;
+    height: 70px;
+}
+
+.mutepig_category{
+    margin-left: 60px;
+}
+
+.mutepig_tag_dis{
+    border:3px #000 solid;
+
+    /*  圆滑方框，是的没毛病   */
+    border-top-right-radius:40px;
+    border-top-left-radius:40px;
+    border-bottom-left-radius:40px;
+    border-bottom-right-radius:40px;
+
+    margin-left: auto;
+    display:-moz-inline-box;
+    display:inline-block;
+    text-align :center;
+    margin-top:10px;
+    border: 1rem solid transparent
+
+}
+
+a.mutepig_tag_size{
+    font-size:30px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 2px 3px #292929;
+}
+
+.mutepig_calendar2{
+    color: #999;
+    text-rendering: auto;
+    font: 20px FontAwesome;
+    display:inline-block;
+/*    width: 25%;*/
+    margin-left:60px;
+}
+
+.mutepig_calendar3{
+    color: #999;
+    font: 20px FontAwesome;
+    margin-right: 10px;
+    position: relative;
+    text-rendering: auto;
+    vertical-align:middle;/*垂直居中*/
+
+}
+
+.middle{
+    display:inline-block;
+    width: 63%;
+}
+
+#avatar{
+
+    width:100%;
+}

@@ -1,0 +1,51 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(7)').attr('class','current');
+});
+</script>
+<section class="docs">
+  <div class="grid">
+
+     <div class="show-on-mobiles">
+        <% include sidebar_mobile %>
+         <div class="whole show-on-mobiles">
+           <article>
+             <a><h2>分类</h2></a>
+             <div class='mutepig_category' style="margin-left:10px">
+             <% for(var i=0;i<typelist.length;i++){%>
+                 <span class="mutepig_tag cat-links mutepig_tag_dis" style="width:auto;background:<%=tagbackground[parseInt(Math.random()*(tagbackground.length-1),10)]%>">
+                 <a class='mutepig_tag_size cat-links ' href="/category/<%=typelist[i] %>"><%=typelist[i] %></a>
+                 </span>
+             <%}%>
+             </div>
+             <div class="section-nav">
+               <div class="left align-right"></div>
+               <div class="right align-left"></div>
+               <div class="clear"></div>
+             </div>
+           </article>
+         </div>
+     </div>
+
+    <% include sidebar %>
+    <div class="unit three-quarters hide-on-mobiles">
+      <article>
+        <a><h1>分类</h1></a>
+        <div class='mutepig_category'>
+        <% for(var i=0;i<typelist.length;i++){%>
+            <span class="mutepig_tag cat-links mutepig_tag_dis" style="background:<%=tagbackground[parseInt(Math.random()*(tagbackground.length-1),10)]%>;width:17%">
+            <a class='mutepig_tag_size cat-links ' href="/category/<%=typelist[i] %>"><%=typelist[i] %></a>
+            </span>
+        <%}%>
+        </div>
+        <div class="section-nav">
+          <div class="left align-right"></div>
+          <div class="right align-left"></div>
+          <div class="clear"></div>
+        </div>
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles godness">
+        <aside>
+<% include foot %>

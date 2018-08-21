@@ -1,0 +1,49 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(6)').attr('class','current');
+});
+</script>
+<section class="docs">
+  <div class="grid">
+     <div class="show-on-mobiles">
+        <% include sidebar_mobile %>
+         <div class="whole show-on-mobiles">
+           <article>
+             <a><h2>友链</h2></a>
+             <div class='mutepig_category' style="margin-left: 30px;">
+            <ul>
+             <% for(var i=0;i<friendname.length;i++){%>
+                 <li><h3><a href="<%=friendlink[i] %>" style="color:#7EC0EE"><%=friendname[i] %></a></h3></li>
+             <%}%>
+            </ul>
+             </div>
+             <div class="section-nav">
+               <div class="left align-right"></div>
+               <div class="right align-left"></div>
+               <div class="clear"></div>
+             </div>
+           </article>
+         </div>
+     </div>
+    <% include sidebar %>
+    <div class="unit three-quarters hide-on-mobiles">
+      <article>
+        <a><h1>友链</h1></a>
+        <div class='mutepig_category'>
+        <ul>
+        <% for(var i=0;i<friendname.length;i++){%>
+            <li><h3><a href="<%=friendlink[i] %>" style="color:#7EC0EE"><%=friendname[i] %></a></h3></li>
+        <%}%>
+        </ul>
+        </div>
+        <div class="section-nav">
+          <div class="left align-right"></div>
+          <div class="right align-left"></div>
+          <div class="clear"></div>
+        </div>
+      </article>
+    </div>
+    <div class="unit one-fifth hide-on-mobiles godness">
+        <aside>
+<% include foot %>

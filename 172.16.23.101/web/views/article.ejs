@@ -1,0 +1,46 @@
+<% include head %>
+<script>
+$('document').ready(function(){
+    $('li[class]:eq(4)').attr('class','current');
+});
+</script>
+<section class="docs">
+<div class="grid">
+   <div class="show-on-mobiles">
+       <% include sidebar_mobile %>
+   <div class="whole show-on-mobiles">
+     <article class="mutepig_article">
+         <div class="Simple" id="Simple_mobile">
+             <b id="Simple_toggle_mobile" title="收起">目录[+]</b></p>
+           <div id="Simple_content_mobile" class="Simple_content"></div>
+         </div>
+         <br>
+         <br>
+       <%- article %>
+         <div class="section-nav">
+           <div class="left align-right"></div>
+           <div class="right align-left"></div>
+           <div class="clear"></div>
+         </div>
+     </article>
+   </div>
+   </div>
+<% include sidebar %>
+<div class="unit three-quarters  hide-on-mobiles">
+  <article class="mutepig_article">
+    <%- article %>
+      <div class="section-nav">
+        <div class="left align-right"></div>
+        <div class="right align-left"></div>
+        <div class="clear"></div>
+      </div>
+  </article>
+</div>
+<div class="unit one-fifth hide-on-mobiles godness">
+  <aside>
+      <div class="Simple" id="Simple" style="position:absolute;">
+          <b id="Simple_toggle" title="收起" style="cursor:pointer;">目录[+]</b></p>
+        <div id="Simple_content" class="Simple_content"></div>
+      </div>
+
+<% include foot %>
