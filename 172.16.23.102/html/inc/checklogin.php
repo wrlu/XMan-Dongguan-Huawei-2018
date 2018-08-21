@@ -1,9 +1,12 @@
 <?php
+// !! Fixed by wrlu
 $user=$_COOKIE['user'];
 if ($user==""){
 header("Location: ?r=login");
 exit;	
 }
+//===========origin file stop here===========
+# [+] Add password hash check here for this file will be included by every administrator pages
 ob_start();
 $con = mysql_connect("localhost","root","root");
 if (!$con) {

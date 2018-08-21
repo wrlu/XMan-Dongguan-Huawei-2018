@@ -1,4 +1,5 @@
 <?php 
+// !! Fixed by wrlu
 ob_start();
 require '../inc/conn.php';
 $login=$_POST['login'];
@@ -23,9 +24,11 @@ exit;
 //写入登录信息并记住30天
 if ($checkbox==1){
 setcookie('user',$user,time()+3600*24*30,'/');
+// [+] Add cookie contains password md5 value.
 setcookie('password',$passwords,time()+3600*24*30,'/');
 }else{
 setcookie('user',$user,0,'/');
+// [+] Add cookie contains password md5 value.
 setcookie('password',$passwords,0,'/');
 }
 echo "<script>this.location='?r=index'</script>";
